@@ -23,19 +23,39 @@ import XCTest
 @testable import Mu
 
 final class HTTPMethodTests: XCTestCase {
-    func testHTTPMethodGetDescription() {
+    func testHTTPMethodGETDescription() {
         XCTAssertEqual(HTTPMethod.get.description, "GET")
     }
     
-    func testHTTPMethodPostDescription() {
+    func testHTTPMethodHEADDescription() {
+        XCTAssertEqual(HTTPMethod.head.description, "HEAD")
+    }
+    
+    func testHTTPMethodPOSTDescription() {
         XCTAssertEqual(HTTPMethod.post.description, "POST")
     }
     
-    func testHTTPMethodDeleteDescription() {
+    func testHTTPMethodPUTDescription() {
+        XCTAssertEqual(HTTPMethod.put.description, "PUT")
+    }
+    
+    func testHTTPMethodDELETEDescription() {
         XCTAssertEqual(HTTPMethod.delete.description, "DELETE")
     }
     
-    func testHTTPMethodPutDescription() {
-        XCTAssertEqual(HTTPMethod.put.description, "PUT")
+    func testHTTPMethodPATCHDescription() {
+        XCTAssertEqual(HTTPMethod.patch.description, "PATCH")
+    }
+    
+    func testHTTPMethodCONNECTDescription() {
+        XCTAssertEqual(HTTPMethod.connect.description, "CONNECT")
+    }
+    
+    func testHTTPMethodOPTIONSDescription() {
+        XCTAssertEqual(HTTPMethod.options.description, "OPTIONS")
+    }
+    
+    func testHTTPMethodTRACEDescription() {
+        XCTAssertEqual(HTTPMethod.trace.description, "TRACE")
     }
 }
